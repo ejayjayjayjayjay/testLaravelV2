@@ -24,7 +24,7 @@
             <img src="/images/ejay.png" class="rounded-circle" style="height: 200px; width: 200px;" alt="DogPhoto">           
         </div>
         <div class="col-9 pt-5">
-                <div style="width: 210px;">
+                <div class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
                     <a href="#" class="btn btn-primary">Add new Post</a>
                 </div>
