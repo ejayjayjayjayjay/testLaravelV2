@@ -17,15 +17,14 @@ class PostsController extends Controller
         return view('posts.create');
     }
 
-    public function store() 
-    {
+    public function store(){
         $data = request()->validate([
             'caption' => 'required',
             'image' => ['required','image']
         ]);
 
         
-        dd(request('image')->store('uploads', ''));
+        dd(request('image')->store('uploads', 'public'));
         auth()->user()->posts()->create($data);
         dd(request()->all);
 
